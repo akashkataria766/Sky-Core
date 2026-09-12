@@ -10,13 +10,15 @@ Rather than focusing only on answering individual questions, the project explore
 
 **Active Development — Public Testing & Android Integration**
 
-Sky Sense is currently in active development.
+Sky Sense has progressed beyond the initial prototype stage and is currently operational for public testing.
 
-The core application is operational, and an Android build is available for testing. Current development is focused on improving the overall user experience, reliability, performance, and application quality.
+The platform currently includes a functional web application, Android application builds, authentication, personalized AI conversations, conversation continuity, membership experiences, and administrative controls.
 
-Some features and experiences may continue to change as development progresses.
+Current development is focused primarily on UI/UX refinement, reliability, performance, testing, and production-quality improvements.
 
-## 📱 Try Sky Sense
+> **Note:** Sky Sense is still under active development. Features, UI, and application behavior may change as the project evolves.
+
+## 📱 Android Application
 
 A testable Android APK is available in this repository.
 
@@ -30,19 +32,19 @@ A testable Android APK is available in this repository.
 6. Create an account or sign in with an existing account.
 7. Explore the available features and test the application experience.
 
-> **Note:** This is a development/testing build. Application behavior and UI may change in future releases.
+> **Note:** The Android application is currently a testing/development build. Application behavior and UI may change in future releases.
 
 ## 🌐 Web Application
 
-Sky Sense is also available as a web application.
+Sky Sense is available as a web application and can be accessed directly through a modern browser.
 
-The web version provides the same core product experience while allowing the platform to be accessed directly through a modern browser.
+The web application provides the primary Sky Sense experience and supports the same core platform functionality as the Android application.
 
 ## ✨ Current Capabilities
 
-The platform currently explores and provides functionality around:
+The platform currently provides functionality around:
 
-- Personal AI conversations
+- Personal AI conversations with SKY
 - Context-aware interaction
 - Conversation history
 - Personalized context and memory
@@ -52,6 +54,7 @@ The platform currently explores and provides functionality around:
 - User feedback
 - Account and profile management
 - Controlled membership experiences
+- Administrative management
 - Progressive Web App support
 - Android application support
 
@@ -59,24 +62,41 @@ The exact feature set may evolve during development.
 
 ## 🤖 Personal AI Experience
 
-Sky Sense is built around a dedicated personal AI experience rather than being presented simply as a generic chatbot.
+Sky Sense is built around a dedicated personal AI experience called **SKY**, rather than being presented simply as a generic chatbot.
 
-The system is designed to support:
+SKY is designed to support:
 
 - Contextual conversations
-- Continuity across conversations
+- Conversation continuity
 - Personalized interaction
-- Structured knowledge
+- Approved structured knowledge
 - Practical decision support
 - Learning and understanding
 
 The AI experience will continue to be refined as development progresses.
+
+## 👤 Membership & Access
+
+Sky Sense uses controlled account access and membership states to provide different experiences depending on the user's account status.
+
+The platform includes:
+
+- Account approval workflows
+- Standard user access
+- VIP membership experiences
+- VIP access-code activation
+- Membership management
+- Administrative controls
+
+VIP access is part of the platform's controlled membership system and is not presented as a conventional paid subscription.
 
 ## 🔐 Security & Privacy
 
 Security and controlled access are important parts of the platform.
 
 Sky Sense uses authenticated access and protected application functionality to help ensure that users can only access features appropriate to their account.
+
+Administrative functionality is separately protected from normal user access.
 
 Sensitive implementation details, credentials, infrastructure configuration, and internal security mechanisms are intentionally not documented in this public repository.
 
@@ -91,22 +111,26 @@ The project currently uses technologies including:
 - Cloud Firestore
 - Cloudflare Workers
 - Cloudflare Workers AI
+- Cloudflare D1
 - Capacitor
 - Android
 
 ## 🧪 Development
 
-The application has progressed beyond the initial prototype stage and is currently undergoing continuous refinement.
+The application is currently undergoing continuous refinement and testing.
 
 Current development priorities include:
 
 - User experience improvements
 - Mobile application refinement
+- UI/UX refinement
 - Reliability testing
 - Performance improvements
-- UI/UX refinement
+- AI experience refinement
 - Feature refinement
 - Production deployment testing
+
+The project is being developed with a focus on maintaining existing functionality and security while improving the overall product experience.
 
 ## 🎯 Vision
 
