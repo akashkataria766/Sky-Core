@@ -17,7 +17,7 @@
 >
 > The latest Android builds are now being tested on a **real Android device** with USB/ADB validation.
 >
-> **Latest APK build:** `20 September 2026 — ~22:24 IST`
+> **Latest APK build:** `21 September 2026 — ~01:07 IST`
 >
 > **Latest README update:** `21 September 2026`
 >
