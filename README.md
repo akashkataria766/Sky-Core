@@ -13,42 +13,100 @@
 
 ## 🚀 LATEST UPDATE — PUBLIC TESTING
 
-> ### 🆕 Latest Sky Sense update is now available for testing.
+> ### 🆕 Sky Sense is actively evolving.
 >
-> **Latest APK build:** `20 September 2026 — 00:38 IST`
+> The latest Android builds are now being tested on a **real Android device** with USB/ADB validation.
+>
+> **Latest APK build:** `20 September 2026 — ~22:24 IST`
+>
+> **Latest README update:** `21 September 2026`
 >
 > **Release:** Android User + Android Admin
 >
-> **Status:** 🟡 **Public Testing / Active Feedback**
->
-> The latest update includes:
-> - Updated Android Firebase/FCM configuration
-> - Updated notification infrastructure
-> - Guest Support ticket persistence improvements
-> - Support and Admin Support improvements
-> - Fresh User and Admin APK builds
-> - Ongoing real-device testing
->
-> ### ⚠️ Current testing status
->
-> The latest build is available, but two areas are still under active verification:
->
-> - **Push notifications:** not yet confirmed reliable when the apps are fully closed.
-> - **Guest Support history:** persistence after app restart/closure is still being verified.
->
-> These are intentionally listed as **testing issues**, not marked as fixed until verified on a real device.
->
-> ### 🧪 Try the latest build and send feedback
->
-> Please test the latest APK and report:
-> - What worked
-> - What did not work
-> - Device + Android version
-> - Foreground/background/fully closed state
-> - Steps to reproduce
-> - Screenshots or logs if available
->
-> **Current testing focus: Notifications + Guest Support persistence.**
+> **Status:** 🟡 **Public Testing / Active Development**
+
+### ⚡ What's New
+
+The latest development cycle focused heavily on reliability, Android integration, messaging and notifications.
+
+* ✅ Logout reliability improved
+* ✅ Native Android FCM registration fixed
+* ✅ Push notification delivery verified on real device
+* ✅ Notifications now identify the sender/action instead of using only generic messages
+* ✅ Notification tap now opens the relevant Sky Sense conversation
+* ✅ VIP notification routing improved
+* ✅ Admin → User notification experience improved
+* ✅ User → Admin notification experience improved
+* ✅ SKY reply notification flow added
+* ✅ Guest Support ticket persistence fixed
+* ✅ Guest Support history survives app restart/process termination
+* ✅ Support notification flow improved
+* ✅ Android background notification behavior improved
+* 🔐 Firestore security rules updated without opening Support data publicly
+* 📱 Android builds tested directly on a real iQOO Neo 6
+
+### 🔔 Smarter Notifications
+
+Notifications are moving beyond generic messages such as:
+
+> `New VIP Message`
+
+toward context-aware notifications such as:
+
+> **Rahul sent a message**
+> *Hey, are you available?*
+
+or:
+
+> **Admin sent a message**
+> *Your request has been updated.*
+
+and:
+
+> **SKY replied**
+> *Here's what I think about that...*
+
+The goal is simple:
+
+> **You should know what happened before opening the app.**
+
+### 📲 Notification Interaction
+
+Notification interaction has also been improved.
+
+**Notification → Tap → Sky Sense → Relevant conversation**
+
+The system now handles notification navigation for messaging flows instead of simply opening the application without context.
+
+---
+
+## 🧪 Current Testing Status
+
+Sky Sense is currently in **public testing**.
+
+### ✅ Recently Verified
+
+| Area                          | Status     |
+| ----------------------------- | ---------- |
+| User/Admin Logout             | 🟢 Working |
+| Native FCM registration       | 🟢 Working |
+| Push notifications            | 🟢 Working |
+| Closed-app notifications      | 🟢 Tested  |
+| Notification tap routing      | 🟢 Working |
+| Guest Support persistence     | 🟢 Working |
+| Support conversation recovery | 🟢 Working |
+| VIP messaging                 | 🟢 Working |
+| SKY conversations             | 🟢 Working |
+| Firebase authentication       | 🟢 Working |
+
+### 🟡 Still Being Polished
+
+* VIP Chat visual experience
+* In-app password management UI
+* Additional Android UX refinements
+* General reliability and edge-case testing
+
+Features in this section are **under active development and verification**.
 
 ---
 
@@ -78,16 +136,16 @@ The goal is simple:
 
 SKY is designed to be:
 
-- Practical
-- Direct
-- Curious
-- Analytical
-- Patient
-- Honest
-- Strategic
-- Occasionally sarcastic
-- Comfortable challenging weak ideas
-- Able to adapt to the context of a conversation
+* Practical
+* Direct
+* Curious
+* Analytical
+* Patient
+* Honest
+* Strategic
+* Occasionally sarcastic
+* Comfortable challenging weak ideas
+* Able to adapt to the context of a conversation
 
 SKY doesn't have to agree with you.
 
@@ -133,11 +191,30 @@ Stay updated with announcements and platform updates.
 
 Share feedback, opinions, and ideas that can help shape the platform.
 
+### 🆘 Support
+
+Support is available for both authenticated users and guests.
+
+Guest support conversations can be recovered after leaving or restarting the application, allowing users to continue an existing support conversation.
+
 ### ⭐ VIP Experience
 
 Sky Sense includes a controlled VIP membership system with additional interaction capabilities.
 
 VIP access is handled through an approval and access-code system rather than a conventional paid subscription.
+
+### 🔔 Intelligent Notifications
+
+Sky Sense can notify you about:
+
+* VIP messages
+* Admin messages
+* Support replies
+* Support requests
+* SKY responses
+* Important account events
+
+Notifications are designed to provide useful context rather than simply saying "New Message."
 
 ---
 
@@ -168,18 +245,18 @@ The platform is designed around several connected experiences:
 
 ## 🛠️ Technology
 
-- React
-- TypeScript
-- Vite
-- Firebase Authentication
-- Cloud Firestore
-- Firebase Cloud Messaging
-- Capacitor
-- Cloudflare Workers
-- Cloudflare D1
-- Cloudflare Workers AI
-- GLM-4.7-Flash
-- PWA support
+* React
+* TypeScript
+* Vite
+* Firebase Authentication
+* Cloud Firestore
+* Firebase Cloud Messaging
+* Capacitor
+* Cloudflare Workers
+* Cloudflare D1
+* Cloudflare Workers AI
+* GLM-4.7-Flash
+* PWA support
 
 ---
 
@@ -189,15 +266,19 @@ Security is treated as a core part of the platform.
 
 The application uses:
 
-- Firebase Authentication
-- Firestore security rules
-- Role-based Admin access
-- Approved-account controls
-- VIP access-code validation
-- Server-side AI request handling
-- Cloudflare Worker API protection
-- Controlled persona knowledge
-- Protected Admin functionality
+* Firebase Authentication
+* Firestore security rules
+* Role-based Admin access
+* Approved-account controls
+* VIP access-code validation
+* Server-side AI request handling
+* Cloudflare Worker API protection
+* Controlled persona knowledge
+* Protected Admin functionality
+* Secure guest-support access
+* Controlled notification permissions
+
+Support functionality is **not made publicly readable** simply to make guest support easier.
 
 ---
 
@@ -211,27 +292,37 @@ Sky Sense is available as a web application and supports PWA installation.
 
 Separate Android applications are available for:
 
-- **Sky Sense** — User application
-- **Sky Sense Admin** — Administrative application
+* **Sky Sense** — User application
+* **Sky Sense Admin** — Administrative application
 
-The Android builds are currently in public testing.
+The Android applications are currently in public testing.
 
 ---
 
-## 🧪 Testing Status
+## 🧪 Real-Device Testing
 
-Sky Sense is currently in **public testing**.
+A major part of the current development process is testing the Android applications on a physical device rather than relying only on successful builds.
 
-The main platform functionality is implemented, while real-device testing continues around:
+Current test device:
 
-- Android push notifications
-- Background/closed-app notification delivery
-- Guest Support persistence
-- Support conversation recovery
-- Android device-specific behavior
-- General stability
+```text
+Device: iQOO Neo 6
+Resolution: 1080 × 2400
+Platform: Android
+Testing: USB / ADB
+```
 
-Features marked as being tested should not be considered production-ready until verified.
+This helps validate:
+
+* Firebase Authentication
+* FCM registration
+* Background notifications
+* Closed-app notifications
+* Notification tap routing
+* Capacitor behavior
+* Persistent guest storage
+* Keyboard behavior
+* Android-specific UI behavior
 
 ---
 
@@ -258,6 +349,20 @@ Steps to reproduce:
 Screenshot/log:
 ```
 
+### 🧪 What We're Especially Interested In
+
+Try unusual flows.
+
+For example:
+
+> Close the app → receive notification → tap notification → check destination.
+
+Or:
+
+> Create guest support ticket → kill app → reopen → recover ticket.
+
+Real-world testing helps identify problems that normal development builds can miss.
+
 ---
 
 ## 🗺️ Development Direction
@@ -268,16 +373,18 @@ Sky Sense is being developed around a simple principle:
 >
 > **The goal is to build a useful personal AI experience around SKY.**
 
-Future development will continue to focus on:
+Current development is focused on:
 
-- Better contextual memory
-- More useful personal workflows
-- Improved SKY reasoning
-- Better notifications
-- More reliable Support
-- Stronger Android experience
-- Stability and security
-- Real-world user feedback
+* Better contextual memory
+* More useful personal workflows
+* Improved SKY reasoning
+* Smarter notifications
+* Better messaging experiences
+* More reliable Support
+* Stronger Android experience
+* Better account security
+* Stability and edge-case handling
+* Real-world user feedback
 
 ---
 
@@ -285,19 +392,44 @@ Future development will continue to focus on:
 
 **Status:** 🟡 Public Testing
 
-**Latest APK update:** `20 September 2026 — 00:38 IST`
+**Latest APK build:** `20 September 2026 — ~22:24 IST`
 
-**Current testing focus:**
+**README updated:** `21 September 2026`
 
-> **Notifications + Guest Support persistence**
+**Current focus:**
 
-These will only be marked complete after successful real-device verification.
+> **Polish → Test → Improve → Repeat**
+
+The core platform is functional and being actively tested on real devices.
+
+---
+
+## 🌱 Open Development
+
+Sky Sense is being built step by step.
+
+The project is intended to provide an opportunity to experiment with:
+
+* AI application development
+* Android application development
+* Firebase architecture
+* Cloudflare Workers
+* Real-time messaging
+* Push notifications
+* Authentication
+* Secure application design
+* Product UI/UX
+* Collaborative development
+
+If you're interested in contributing, testing, experimenting, or simply exploring the project, feedback is welcome.
 
 ---
 
 ## ❤️ Built to Be Used
 
-Sky Sense is being built step by step, tested on real devices, and improved from actual feedback.
+Sky Sense is not being built only to demonstrate an AI API.
+
+It's being built as a real product experience — tested, broken, fixed, refined, and tested again.
 
 > **Think. Learn. Understand. Decide.**
 >
