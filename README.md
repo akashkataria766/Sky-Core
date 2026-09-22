@@ -13,100 +13,153 @@
 
 ## 🚀 LATEST UPDATE — PUBLIC TESTING
 
-> ### 🆕 Sky Sense is actively evolving.
+> ### 🆕 A major UI & Android experience update is now available.
 >
-> The latest Android builds are now being tested on a **real Android device** with USB/ADB validation.
->
-> **Latest APK build:** `21 September 2026 — ~01:07 IST`
->
-> **Latest README update:** `21 September 2026`
+> **Latest update:** `22 September 2026`
 >
 > **Release:** Android User + Android Admin
 >
 > **Status:** 🟡 **Public Testing / Active Development**
+>
+> Today's update focused on making Sky Sense feel more like a polished real-world messaging application while improving Android usability and account security.
 
 ### ⚡ What's New
 
-The latest development cycle focused heavily on reliability, Android integration, messaging and notifications.
+#### 💬 Modern VIP Chat
 
-* ✅ Logout reliability improved
-* ✅ Native Android FCM registration fixed
-* ✅ Push notification delivery verified on real device
-* ✅ Notifications now identify the sender/action instead of using only generic messages
-* ✅ Notification tap now opens the relevant Sky Sense conversation
-* ✅ VIP notification routing improved
-* ✅ Admin → User notification experience improved
-* ✅ User → Admin notification experience improved
-* ✅ SKY reply notification flow added
-* ✅ Guest Support ticket persistence fixed
-* ✅ Guest Support history survives app restart/process termination
-* ✅ Support notification flow improved
-* ✅ Android background notification behavior improved
-* 🔐 Firestore security rules updated without opening Support data publicly
-* 📱 Android builds tested directly on a real iQOO Neo 6
+* ✅ Instagram/WhatsApp-inspired chat layout
+* ✅ Unified chat header
+* ✅ Removed unnecessary extra banner/header
+* ✅ Refresh button moved to the top-right
+* ✅ Permanent SKY/Admin circular avatars
+* ✅ Cleaner message grouping and presentation
+* ✅ Removed distracting blue focus outlines
+* ✅ Enter now creates a new line instead of immediately sending
+* ✅ Keyboard no longer automatically opens when a reply arrives
+* ✅ Improved Android back-swipe navigation
 
-### 🔔 Smarter Notifications
+#### 📨 Message Interaction
 
-Notifications are moving beyond generic messages such as:
+Messages now support richer interaction:
 
-> `New VIP Message`
+* ⭐ **Star** messages
+* ✏️ **Edit** messages
+* 🗑️ **Delete** messages
+* Edited messages display an **Edited** indicator
+* Deleted messages display:
 
-toward context-aware notifications such as:
+> 🚫 This message was deleted
+
+Long-press a message to access the available actions.
+
+#### ℹ️ Chat Information
+
+Both **SKY Chat** and **VIP Chat** now include an **Info (i)** panel.
+
+It provides information such as:
+
+* Chat identity
+* Build information
+* Chat-related controls
+* Reset Chat action
+
+#### 🤖 SKY Reliability
+
+* ✅ Fixed the SKY Chat infinite-loading issue
+* ✅ Restored the AI streaming connection
+* ✅ Improved the experience when SKY is generating a response
+
+#### 🔐 Account Security
+
+Security & Privacy now includes:
+
+* ✅ **Change Password**
+* Existing password-reset/recovery flow
+* Firebase Authentication-based password handling
+
+Password changes are performed through the authenticated account system rather than storing passwords inside the application.
+
+#### 📱 Android Improvements
+
+* ✅ Updated Android launcher icons
+* ✅ Improved Android back navigation
+* ✅ Improved chat keyboard behavior
+* ✅ Improved mobile chat layout
+* ✅ Continued real-device testing on iQOO Neo 6
+
+---
+
+## 🔔 Intelligent Notifications
+
+Sky Sense notifications are designed to tell you **what happened and who caused it** rather than displaying generic messages.
+
+Examples:
 
 > **Rahul sent a message**
 > *Hey, are you available?*
 
-or:
-
 > **Admin sent a message**
 > *Your request has been updated.*
-
-and:
 
 > **SKY replied**
 > *Here's what I think about that...*
 
-The goal is simple:
+Notifications can cover:
 
-> **You should know what happened before opening the app.**
+* VIP messages
+* Admin messages
+* Support messages
+* Support replies
+* SKY responses
+* Important account events
 
 ### 📲 Notification Interaction
 
-Notification interaction has also been improved.
+```text
+Message
+   ↓
+Notification
+   ↓
+Tap
+   ↓
+Sky Sense
+   ↓
+Relevant Conversation
+```
 
-**Notification → Tap → Sky Sense → Relevant conversation**
-
-The system now handles notification navigation for messaging flows instead of simply opening the application without context.
+Notification taps are designed to open the relevant conversation instead of simply dropping the user at the application home screen.
 
 ---
 
 ## 🧪 Current Testing Status
 
-Sky Sense is currently in **public testing**.
+Sky Sense remains in **public testing**.
 
-### ✅ Recently Verified
+### ✅ Verified
 
 | Area                          | Status     |
 | ----------------------------- | ---------- |
 | User/Admin Logout             | 🟢 Working |
-| Native FCM registration       | 🟢 Working |
-| Push notifications            | 🟢 Working |
-| Closed-app notifications      | 🟢 Tested  |
-| Notification tap routing      | 🟢 Working |
-| Guest Support persistence     | 🟢 Working |
-| Support conversation recovery | 🟢 Working |
-| VIP messaging                 | 🟢 Working |
-| SKY conversations             | 🟢 Working |
-| Firebase authentication       | 🟢 Working |
+| Native FCM                    | 🟢 Working |
+| Push Notifications            | 🟢 Working |
+| Closed-App Notifications      | 🟢 Working |
+| Notification Tap Routing      | 🟢 Working |
+| Guest Support Persistence     | 🟢 Working |
+| Support Conversation Recovery | 🟢 Working |
+| VIP Messaging                 | 🟢 Working |
+| SKY Chat                      | 🟢 Working |
+| SKY Streaming                 | 🟢 Working |
+| Password Change               | 🟢 Working |
+| Android Back Navigation       | 🟢 Working |
+| Firebase Authentication       | 🟢 Working |
 
-### 🟡 Still Being Polished
+### 🟡 Still Being Improved
 
-* VIP Chat visual experience
-* In-app password management UI
-* Additional Android UX refinements
-* General reliability and edge-case testing
-
-Features in this section are **under active development and verification**.
+* Fine UI/UX polish
+* Android edge cases
+* Messaging edge cases
+* Performance optimization
+* Final release QA
 
 ---
 
@@ -165,15 +218,13 @@ And when a simple answer is enough, SKY doesn't need to turn it into an essay.
 
 ## ✨ What You Can Do
 
-Sky Sense combines conversation with practical personal tools.
-
 ### 💬 Talk with SKY
 
 Have contextual conversations with SKY and continue discussions without treating every message as an isolated question.
 
 ### 🧠 Conversation Context
 
-Sky Sense is designed to preserve relevant conversational context so that follow-up questions feel like part of the same conversation.
+Relevant conversational context is preserved so follow-up questions can feel like part of the same conversation.
 
 ### 📝 Quick Notes
 
@@ -181,7 +232,7 @@ Capture thoughts, ideas, reminders, or information you don't want to lose.
 
 ### 🎯 Goal Tracker
 
-Create and manage personal goals while keeping them accessible alongside your AI experience.
+Create and manage personal goals alongside your AI experience.
 
 ### 📰 What's New
 
@@ -195,7 +246,7 @@ Share feedback, opinions, and ideas that can help shape the platform.
 
 Support is available for both authenticated users and guests.
 
-Guest support conversations can be recovered after leaving or restarting the application, allowing users to continue an existing support conversation.
+Guest support conversations can persist across application restarts so users can continue their support conversations.
 
 ### ⭐ VIP Experience
 
@@ -205,16 +256,13 @@ VIP access is handled through an approval and access-code system rather than a c
 
 ### 🔔 Intelligent Notifications
 
-Sky Sense can notify you about:
+Receive contextual notifications for:
 
-* VIP messages
+* VIP conversations
+* Support
 * Admin messages
-* Support replies
-* Support requests
-* SKY responses
-* Important account events
-
-Notifications are designed to provide useful context rather than simply saying "New Message."
+* SKY replies
+* Important account activity
 
 ---
 
@@ -277,6 +325,7 @@ The application uses:
 * Protected Admin functionality
 * Secure guest-support access
 * Controlled notification permissions
+* Firebase-based password management
 
 Support functionality is **not made publicly readable** simply to make guest support easier.
 
@@ -295,13 +344,13 @@ Separate Android applications are available for:
 * **Sky Sense** — User application
 * **Sky Sense Admin** — Administrative application
 
-The Android applications are currently in public testing.
+Both Android applications are currently in public testing.
 
 ---
 
 ## 🧪 Real-Device Testing
 
-A major part of the current development process is testing the Android applications on a physical device rather than relying only on successful builds.
+A major part of development is testing the Android applications on physical hardware rather than relying only on successful builds.
 
 Current test device:
 
@@ -322,7 +371,9 @@ This helps validate:
 * Capacitor behavior
 * Persistent guest storage
 * Keyboard behavior
-* Android-specific UI behavior
+* Android back navigation
+* Chat UI
+* Android-specific behavior
 
 ---
 
@@ -361,6 +412,10 @@ Or:
 
 > Create guest support ticket → kill app → reopen → recover ticket.
 
+Or:
+
+> Long-press a message → test Star/Edit/Delete.
+
 Real-world testing helps identify problems that normal development builds can miss.
 
 ---
@@ -373,16 +428,16 @@ Sky Sense is being developed around a simple principle:
 >
 > **The goal is to build a useful personal AI experience around SKY.**
 
-Current development is focused on:
+Current development focuses on:
 
 * Better contextual memory
 * More useful personal workflows
 * Improved SKY reasoning
 * Smarter notifications
 * Better messaging experiences
-* More reliable Support
 * Stronger Android experience
 * Better account security
+* UI/UX refinement
 * Stability and edge-case handling
 * Real-world user feedback
 
@@ -392,9 +447,7 @@ Current development is focused on:
 
 **Status:** 🟡 Public Testing
 
-**Latest APK build:** `20 September 2026 — ~22:24 IST`
-
-**README updated:** `21 September 2026`
+**Latest update:** `22 September 2026`
 
 **Current focus:**
 
@@ -408,7 +461,7 @@ The core platform is functional and being actively tested on real devices.
 
 Sky Sense is being built step by step.
 
-The project is intended to provide an opportunity to experiment with:
+The project provides an opportunity to experiment with:
 
 * AI application development
 * Android application development
