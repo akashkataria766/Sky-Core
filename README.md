@@ -46,7 +46,7 @@ The APK is attached to the latest release so you can download it directly withou
 
 ### Android installation
 
-1. Download **`Sky.Core.apk`** from the latest GitHub Release.
+1. Download **`Sky Core.apk`** from the latest GitHub Release.
 2. Open the downloaded APK on your Android device.
 3. If Android asks for permission to install from that source, allow it.
 4. Install and open **Sky Core**.
